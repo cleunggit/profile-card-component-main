@@ -1,0 +1,122 @@
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: var(--darkGrayishBlue);
+  letter-spacing: 1px;
+}
+h1, h2, h3 {
+  margin: 0
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--veryDarkDesaturatedBlue);
+}
+
+p {
+  margin: 8px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-position: bottom 40vh right 51vw, top 52vh left 48vw;
+  background-repeat: no-repeat;
+  background-color: var(--darkCyan);
+}
+
+.card {
+  max-width: 380px;
+  width: 100%;
+  background-color: white;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  border-radius: 1rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 97px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: white;
+  border: 5px solid white;
+  margin-bottom: 20px;
+}
+
+.name {
+  margin-bottom: 15px;
+}
+
+.age {
+  color: var(--darkGray);
+  font-weight: 400;
+}
+
+.city {
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.followers {
+  text-align: center;
+}
+
+.likes {
+  text-align: center;
+}
+
+.photos {
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .container {
+    background-position: bottom 45vh right 38vw, top 37vh left 44vw;
+  }
+
+  .card {
+    width: 23rem;
+  }
+
+  .profile {
+    padding-top: 80px;
+  }
+}
